@@ -353,3 +353,16 @@ header {
   padding: 10% 0;
   background-color: $silver-color;
 }
+footer{
+  background: url("../images/contact bg.png") no-repeat center;
+  background-size: cover;
+  .hello{
+  h2{
+    @extend %title;
+    color: $white-color;
+    padding-top: 20%;
+    padding-bottom: 5%;
+  }
+}
+
+}
