@@ -1,4 +1,39 @@
-
+@font-face {
+  font-family: 'AsapBold';
+  src: url('../fonts/AsapBold.eot');
+  src: url('../fonts/AsapBold.eot') format('embedded-opentype'),
+  url('../fonts/AsapBold.woff2') format('woff2'),
+  url('../fonts/AsapBold.woff') format('woff'),
+  url('../fonts/AsapBold.ttf') format('truetype'),
+  url('../fonts/AsapBold.svg#AsapBold') format('svg');
+}
+@font-face {
+  font-family: 'AsapMedium';
+  src: url('../fonts/AsapMedium.eot');
+  src: url('../fonts/AsapMedium.eot') format('embedded-opentype'),
+  url('../fonts/AsapMedium.woff2') format('woff2'),
+  url('../fonts/AsapMedium.woff') format('woff'),
+  url('../fonts/AsapMedium.ttf') format('truetype'),
+  url('../fonts/AsapMedium.svg#AsapMedium') format('svg');
+}
+@font-face {
+  font-family: 'AsapRegular';
+  src: url('../fonts/AsapRegular.eot');
+  src: url('../fonts/AsapRegular.eot') format('embedded-opentype'),
+  url('../fonts/AsapRegular.woff2') format('woff2'),
+  url('../fonts/AsapRegular.woff') format('woff'),
+  url('../fonts/AsapRegular.ttf') format('truetype'),
+  url('../fonts/AsapRegular.svg#AsapRegular') format('svg');
+}
+@font-face {
+  font-family: 'AsapItalic';
+  src: url('../fonts/AsapItalic.eot');
+  src: url('../fonts/AsapItalic.eot') format('embedded-opentype'),
+  url('../fonts/AsapItalic.woff2') format('woff2'),
+  url('../fonts/AsapItalic.woff') format('woff'),
+  url('../fonts/AsapItalic.ttf') format('truetype'),
+  url('../fonts/AsapItalic.svg#AsapItalic') format('svg');
+}
 
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
@@ -21,6 +56,7 @@ $hover-color: #dedede;
 }
 %title {
   color: $font-color;
+  font-family: 'AsapMedium';
   @include min-screen(992px){
     font-size: 46px;
   }
@@ -38,6 +74,7 @@ $hover-color: #dedede;
 }
   %title2{
     color: $font-color;
+    font-family: 'AsapMedium';
     @include min-screen(992px){
       font-size: 46px;
     }
@@ -56,6 +93,7 @@ $hover-color: #dedede;
     border-radius: 0;
     width: 130px;
     color: $font-color;
+    font-family: 'AsapMedium';
   }
   %btn_hover{
       background-color: white;
@@ -88,8 +126,9 @@ header {
     }
     h1 {
       color: $font-color;
+      font-family: 'AsapMedium';
       @include min-screen(992px){
-        font-size: 90px;
+        font-size: 75px;
       }
       @include max-screen(767px){
         font-size: 30px;
@@ -114,6 +153,7 @@ header {
       border-radius: 0;
       width: 130px;
       color: $font-color;
+      font-family: 'AsapMedium';
       @include max-screen(767px){
         &:last-of-type{
           margin-top: 10px;
@@ -129,10 +169,10 @@ header {
     }
   }
   .navbar-toggle .icon-bar{
-  background-color: black;
+  background-color: $font-color;
   }
   .navbar-toggle{
-    border: solid 1px black;
+    border: solid 1px $font-color;
   }
   .container>.navbar-collapse{
     margin: auto;
@@ -140,6 +180,7 @@ header {
   }
   .navbar-nav>li>a{
     color: $font-color;
+    font-family: 'AsapRegular';
     &:focus{
       background: none;
     }
@@ -226,7 +267,7 @@ header {
       color: #4d4d4d;
       font-size: 24px;
       text-decoration: none;
-      //font-family: 'AsapMedium';
+      font-family: 'AsapMedium';
       @include max-screen(767px){
         font-size: 14px;
       }
@@ -301,7 +342,6 @@ header {
     float: left;
   }
   .owl-carousel {
-    //width: 100%;
     border: solid 1px black;
 
     h4 {
@@ -311,7 +351,7 @@ header {
       width: 65%;
       padding-top: 5%;
       float: right;
-      //font-family: 'AsapMedium';
+      font-family: 'AsapMedium';
       @include max-screen(767px){
         font-size: 15px;
       }
@@ -330,7 +370,7 @@ header {
       float: right;
       display: block;
       padding-right: 10%;
-      //font-family: 'AsapRegular';
+      font-family: 'AsapRegular';
       @include max-screen(767px){
         font-size: 10px;
       }
@@ -367,9 +407,28 @@ header {
 footer{
   background: url("../images/contact bg.png") no-repeat center;
   background-size: cover;
+  form{
+    .form-control{
+      border-radius: 0;
+      border: none;
+    }
+  }
   .btn{
     @extend %button;
     background-color: $white-color;
+    &:hover{
+      @extend %btn_hover;
+      background-color: $hover-color;
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: 15px;
+      height: 13px;
+      background: url("../images/send-button.png") no-repeat center;
+      float: right;
+      margin-top: 3%;
+    }
   }
   .hello{
   h2{
@@ -400,6 +459,7 @@ footer{
       float: left;
       margin-top: 10px;
       margin-bottom: 15px;
+      color: $font-color;
     .fab {
       font-size: 15px;
       text-align: center;
@@ -427,6 +487,7 @@ footer{
       width: 25px;
       height: 25px;
       background-color: $white-color;
+      color: $font-color;
       margin-top: 10px;
       margin-bottom: 15px;
       display: inline-block;
