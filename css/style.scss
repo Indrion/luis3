@@ -1,12 +1,56 @@
 
 
 $font-color: #4d4d4d;
+$white-color: white;
+$silver-color: #f6f6f6;
+$hover-color: #dedede;
 
 @mixin max-screen($res){
   @media screen and (max-width: $res){
     @content
   }
 }
+%title {
+  font-size: 46px;
+  color: $font-color;
+  @include max-screen(767px){
+    font-size: 21px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $font-color;
+    margin: auto auto 20px;
+  }
+}
+  %title2{
+    font-size: 46px;
+    color: $font-color;
+    &:before{
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: $font-color;
+      margin: 0 0 20px;
+    }
+}
+  %button{
+    border: solid 1px black;
+    background-color: transparent;
+    border-radius: 0;
+    width: 130px;
+    color: $font-color;
+  }
+  %btn_hover{
+      background-color: white;
+      border: solid 1px transparent;
+      color: black;
+      -webkit-box-shadow: 0 2px 10px 0 #000000;
+      box-shadow: 0 2px 10px 0 #000000;
+  }
 
 header {
   background: url("../images/hero_img.png") no-repeat center;
@@ -78,5 +122,29 @@ header {
       }
       }
     }
-
+}
+.about_me {
+  padding: 10% 0;
+  background-color: $white-color;
+  .for_text {
+    margin-top: 20px;
+    h2 {
+      @extend %title2;
+    }
+  }
+  h2{
+    @extend %title;
+  }
+  p{
+    font-size: 16px;
+    color: $font-color;
+  }
+  .btn{
+    @extend %button;
+    width: auto;
+    &:hover{
+      @extend %btn_hover;
+      background-color: $hover-color;
+    }
+  }
 }
