@@ -1,12 +1,12 @@
-.about_me h2, .services h2 {
+.about_me h2, .services h2, .my_skills h2, .portfolio h2 {
   color: #4d4d4d; }
   @media screen and (min-width: 992px) {
-    .about_me h2, .services h2 {
+    .about_me h2, .services h2, .my_skills h2, .portfolio h2 {
       font-size: 46px; } }
   @media screen and (max-width: 767px) {
-    .about_me h2, .services h2 {
+    .about_me h2, .services h2, .my_skills h2, .portfolio h2 {
       font-size: 21px; } }
-  .about_me h2:before, .services h2:before {
+  .about_me h2:before, .services h2:before, .my_skills h2:before, .portfolio h2:before {
     content: '';
     display: block;
     width: 60px;
@@ -27,14 +27,14 @@
     background-color: #4d4d4d;
     margin: 0 0 20px; }
 
-.about_me .btn {
+.about_me .btn, .portfolio .btn {
   border: solid 1px black;
   background-color: transparent;
   border-radius: 0;
   width: 130px;
   color: #4d4d4d; }
 
-.about_me .btn:hover {
+.about_me .btn:hover, .portfolio .btn:hover {
   background-color: white;
   border: solid 1px transparent;
   color: black;
@@ -147,8 +147,48 @@ header {
       color: #4d4d4d;
       font-size: 24px;
       text-decoration: none; }
+      @media screen and (max-width: 767px) {
+        .services .block a {
+          font-size: 14px; } }
       .services .block a:hover {
         text-shadow: 1px 1px 10px #0A0A0A;
         color: black; }
+
+.my_skills {
+  padding: 10% 0;
+  background-color: white; }
+
+.portfolio {
+  background-color: #f6f6f6;
+  padding: 10% 0; }
+  .portfolio .thumbnail {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none; }
+    .portfolio .thumbnail:hover {
+      border: none;
+      -webkit-box-shadow: 0 0 20px 1px #262626;
+      box-shadow: 0 0 20px 1px #262626; }
+      .portfolio .thumbnail:hover:after {
+        opacity: 1;
+        top: 40%; }
+    .portfolio .thumbnail:after {
+      content: "";
+      display: block;
+      background: url("../images/hover_arrow.png") white;
+      position: absolute;
+      left: 50%;
+      margin-left: -30px;
+      top: -40%;
+      opacity: 0;
+      transition: 0.5s;
+      width: 55px;
+      height: 55px; }
+      @media screen and (max-width: 992px) {
+        .portfolio .thumbnail:after {
+          width: 0;
+          height: 0; } }
+  .portfolio .btn:hover {
+    background-color: #dedede; }
 
 /*# sourceMappingURL=style.css.map */
