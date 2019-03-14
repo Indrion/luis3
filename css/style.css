@@ -1,5 +1,6 @@
 @import url(owl.carousel.min.css);
 @import url(owl.theme.default.min.css);
+@import url(all.min.css);
 .about_me h2, .services h2, .my_skills h2, .portfolio h2, .testimonials h2, footer .hello h2 {
   color: #4d4d4d; }
   @media screen and (min-width: 992px) {
@@ -29,7 +30,7 @@
     background-color: #4d4d4d;
     margin: 0 0 20px; }
 
-.about_me .btn, .portfolio .btn {
+.about_me .btn, .portfolio .btn, footer .btn {
   border: solid 1px black;
   background-color: transparent;
   border-radius: 0;
@@ -50,9 +51,14 @@ header {
     header {
       background: url("../images/bg_element.png");
       background-size: cover; } }
+  header .down {
+    position: absolute;
+    bottom: 5%;
+    left: 15%; }
   header .hero {
     padding-top: 25%;
-    padding-bottom: 25%; }
+    padding-bottom: 25%;
+    position: relative; }
     @media screen and (max-width: 767px) {
       header .hero {
         padding-top: 0;
@@ -101,10 +107,12 @@ header {
     text-align: center; }
   header .navbar-nav > li > a {
     color: #4d4d4d; }
+    header .navbar-nav > li > a:focus {
+      background: none; }
     header .navbar-nav > li > a:hover {
-      background: none;
       border-bottom: solid 2px #4d4d4d;
-      padding-bottom: 0; }
+      padding-bottom: 0;
+      background: none; }
       @media screen and (max-width: 767px) {
         header .navbar-nav > li > a:hover {
           border: none;
@@ -249,9 +257,63 @@ header {
 footer {
   background: url("../images/contact bg.png") no-repeat center;
   background-size: cover; }
+  footer .btn {
+    background-color: white; }
   footer .hello h2 {
     color: white;
     padding-top: 20%;
     padding-bottom: 5%; }
+  footer .border:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 5%; }
+  footer .icon a {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    margin-left: 10px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px; }
+    footer .icon a .fab {
+      font-size: 15px;
+      text-align: center;
+      margin: 5px; }
+    footer .icon a .fa-facebook-f {
+      margin-left: 10px; }
+    footer .icon a .fas {
+      font-size: 15px;
+      text-align: center;
+      margin: 5px; }
+    footer .icon a:hover {
+      background-color: #2aabd2;
+      color: white; }
+  footer .icon_2 a {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: inline-block; }
+    footer .icon_2 a .fab {
+      font-size: 15px;
+      text-align: center;
+      margin: 5px; }
+    footer .icon_2 a .fa-facebook-f {
+      margin-left: 10px; }
+    footer .icon_2 a .fas {
+      font-size: 15px;
+      text-align: center;
+      margin: 5px; }
+    footer .icon_2 a:hover {
+      background-color: #2aabd2;
+      color: white; }
+  footer small {
+    margin-top: 10px;
+    color: white;
+    font-size: 16px; }
 
 /*# sourceMappingURL=style.css.map */

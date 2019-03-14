@@ -2,6 +2,7 @@
 
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
+@import "all.min.css";
 
 $font-color: #4d4d4d;
 $white-color: white;
@@ -64,6 +65,7 @@ $hover-color: #dedede;
       box-shadow: 0 2px 10px 0 #000000;
   }
 
+
 header {
   background: url("../images/hero_img.png") no-repeat center;
   background-size: cover;
@@ -71,9 +73,15 @@ header {
     background: url("../images/bg_element.png");
     background-size: cover;
   }
+  .down{
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+  }
   .hero {
     padding-top: 25%;
     padding-bottom: 25%;
+    position: relative;
     @include max-screen(767px){
       padding-top: 0;
       padding-bottom: 10%;
@@ -132,10 +140,13 @@ header {
   }
   .navbar-nav>li>a{
     color: $font-color;
-    &:hover{
+    &:focus{
       background: none;
+    }
+    &:hover{
       border-bottom: solid 2px $font-color;
       padding-bottom: 0;
+      background: none;
       @include max-screen(767px){
         border: none;
         padding-bottom: 10px;
@@ -356,6 +367,10 @@ header {
 footer{
   background: url("../images/contact bg.png") no-repeat center;
   background-size: cover;
+  .btn{
+    @extend %button;
+    background-color: $white-color;
+  }
   .hello{
   h2{
     @extend %title;
@@ -364,5 +379,85 @@ footer{
     padding-bottom: 5%;
   }
 }
+  .border{
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $white-color;
+      margin-top: 5%;
+    }
+
+  }
+  .icon {
+
+    a {
+      width: 25px;
+      height: 25px;
+      background-color: $white-color;
+      margin-left: 10px;
+      float: left;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    .fab {
+      font-size: 15px;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .fa-facebook-f {
+      margin-left: 10px;
+    }
+
+    .fas {
+      font-size: 15px;
+      text-align: center;
+      margin: 5px;
+    }
+
+    &:hover {
+      background-color: #2aabd2;
+      color: white;
+      }
+    }
+  }
+  .icon_2{
+    a {
+      width: 25px;
+      height: 25px;
+      background-color: $white-color;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      display: inline-block;
+      .fab {
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+      }
+
+      .fa-facebook-f {
+        margin-left: 10px;
+      }
+
+      .fas {
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+      }
+
+      &:hover {
+        background-color: #2aabd2;
+        color: white;
+      }
+    }
+  }
+
+
+  small{
+    margin-top: 10px;
+    color: $white-color;
+    font-size: 16px;
+  }
 
 }
