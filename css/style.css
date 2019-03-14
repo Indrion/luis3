@@ -1,10 +1,12 @@
-.about_me h2 {
-  font-size: 46px;
+.about_me h2, .services h2 {
   color: #4d4d4d; }
+  @media screen and (min-width: 992px) {
+    .about_me h2, .services h2 {
+      font-size: 46px; } }
   @media screen and (max-width: 767px) {
-    .about_me h2 {
+    .about_me h2, .services h2 {
       font-size: 21px; } }
-  .about_me h2:before {
+  .about_me h2:before, .services h2:before {
     content: '';
     display: block;
     width: 60px;
@@ -13,8 +15,10 @@
     margin: auto auto 20px; }
 
 .about_me .for_text h2 {
-  font-size: 46px;
   color: #4d4d4d; }
+  @media screen and (min-width: 992px) {
+    .about_me .for_text h2 {
+      font-size: 46px; } }
   .about_me .for_text h2:before {
     content: '';
     display: block;
@@ -53,12 +57,21 @@ header {
         padding-bottom: 10%; } }
     header .hero h1 {
       color: #4d4d4d; }
+      @media screen and (min-width: 992px) {
+        header .hero h1 {
+          font-size: 90px; } }
       @media screen and (max-width: 767px) {
         header .hero h1 {
-          font-size: 21px;
+          font-size: 30px;
           text-align: center; } }
       header .hero h1 small {
         display: block; }
+        @media screen and (min-width: 992px) {
+          header .hero h1 small {
+            font-size: 22px; } }
+        @media screen and (max-width: 769px) {
+          header .hero h1 small {
+            font-size: 50%; } }
         @media screen and (max-width: 767px) {
           header .hero h1 small {
             font-size: 12px; } }
@@ -99,8 +112,6 @@ header {
 .about_me {
   padding: 10% 0;
   background-color: white; }
-  .about_me .for_text {
-    margin-top: 20px; }
   .about_me p {
     font-size: 16px;
     color: #4d4d4d; }
@@ -108,5 +119,36 @@ header {
     width: auto; }
     .about_me .btn:hover {
       background-color: #dedede; }
+
+.services {
+  background-color: #f6f6f6;
+  padding: 10% 0; }
+  .services .block {
+    padding-bottom: 25px;
+    text-align: center; }
+    .services .block:nth-child(2):before {
+      background: url("../images/2.png") no-repeat center; }
+    .services .block:nth-child(3):before {
+      background: url("../images/3.png") no-repeat center; }
+    .services .block:nth-child(4):before {
+      background: url("../images/4.png") no-repeat center; }
+    .services .block:nth-child(5):before {
+      background: url("../images/5.png") no-repeat center; }
+    .services .block:last-child:before {
+      background: url("../images/6.png") no-repeat center; }
+    .services .block:before {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 81px;
+      background: url("../images/1.png") no-repeat center;
+      margin: auto; }
+    .services .block a {
+      color: #4d4d4d;
+      font-size: 24px;
+      text-decoration: none; }
+      .services .block a:hover {
+        text-shadow: 1px 1px 10px #0A0A0A;
+        color: black; }
 
 /*# sourceMappingURL=style.css.map */

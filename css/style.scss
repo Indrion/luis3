@@ -10,9 +10,16 @@ $hover-color: #dedede;
     @content
   }
 }
+@mixin min-screen($res){
+  @media screen and (min-width: $res){
+    @content
+  }
+}
 %title {
-  font-size: 46px;
   color: $font-color;
+  @include min-screen(992px){
+    font-size: 46px;
+  }
   @include max-screen(767px){
     font-size: 21px;
   }
@@ -26,8 +33,10 @@ $hover-color: #dedede;
   }
 }
   %title2{
-    font-size: 46px;
     color: $font-color;
+    @include min-screen(992px){
+      font-size: 46px;
+    }
     &:before{
       content: '';
       display: block;
@@ -68,12 +77,21 @@ header {
     }
     h1 {
       color: $font-color;
+      @include min-screen(992px){
+        font-size: 90px;
+      }
       @include max-screen(767px){
-        font-size: 21px;
+        font-size: 30px;
         text-align: center;
       }
       small {
         display: block;
+        @include min-screen(992px){
+          font-size: 22px;
+        }
+        @include max-screen(769px){
+          font-size: 50%;
+        }
         @include max-screen(767px){
           font-size: 12px;
         }
@@ -127,7 +145,6 @@ header {
   padding: 10% 0;
   background-color: $white-color;
   .for_text {
-    margin-top: 20px;
     h2 {
       @extend %title2;
     }
@@ -145,6 +162,61 @@ header {
     &:hover{
       @extend %btn_hover;
       background-color: $hover-color;
+    }
+  }
+}
+.services{
+  background-color: $silver-color;
+  padding: 10% 0;
+  h2{
+    @extend %title;
+  }
+  .block{
+    padding-bottom: 25px;
+    text-align: center;
+    &:nth-child(2){
+      &:before{
+        background: url("../images/2.png") no-repeat center;
+      }
+    }
+    &:nth-child(3){
+      &:before{
+        background: url("../images/3.png") no-repeat center;
+      }
+    }
+    &:nth-child(4){
+      &:before{
+        background: url("../images/4.png") no-repeat center;
+      }
+    }
+    &:nth-child(5){
+      &:before{
+        background: url("../images/5.png") no-repeat center;
+      }
+    }
+    &:last-child{
+      &:before{
+        background: url("../images/6.png") no-repeat center;
+      }
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 81px;
+      background: url("../images/1.png") no-repeat center;
+      margin: auto;
+
+    }
+    a{
+      color: #4d4d4d;
+      font-size: 24px;
+      text-decoration: none;
+      //font-family: 'AsapMedium';
+      &:hover{
+        text-shadow: 1px 1px 10px #0A0A0A;
+        color: black;
+      }
     }
   }
 }
