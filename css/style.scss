@@ -1,5 +1,8 @@
 
 
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+
 $font-color: #4d4d4d;
 $white-color: white;
 $silver-color: #f6f6f6;
@@ -273,5 +276,76 @@ header {
       @extend %btn_hover;
       background-color: $hover-color;
     }
+  }
+}
+.testimonials{
+  padding: 10% 0;
+  h2{
+    @extend %title
+  }
+  .owl-carousel .owl-item img{
+    width: 25%;
+    margin: 5% 0 5% 5%;
+    display: inline-block;
+    float: left;
+  }
+  .owl-carousel {
+    //width: 100%;
+    border: solid 1px black;
+
+    h4 {
+      font-size: 30px;
+      color: #212121;
+      text-transform: uppercase;
+      width: 65%;
+      padding-top: 5%;
+      float: right;
+      //font-family: 'AsapMedium';
+      @include max-screen(767px){
+        font-size: 15px;
+      }
+      small{
+        display: block;
+        font-size: 22px;
+        @include max-screen(767px){
+          font-size: 8px;
+        }
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #212121;
+      width: 65%;
+      float: right;
+      display: block;
+      padding-right: 10%;
+      //font-family: 'AsapRegular';
+      @include max-screen(767px){
+        font-size: 10px;
+      }
+    }
+    button{
+      outline: none;
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+    &:focus{
+    }
+  }
+
+
+  .owl-carousel button.owl-dot span {
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    border: solid 1px black;
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .owl-carousel button.owl-dot.active span {
+    background-color: black;
   }
 }

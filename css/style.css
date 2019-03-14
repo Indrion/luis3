@@ -1,12 +1,14 @@
-.about_me h2, .services h2, .my_skills h2, .portfolio h2 {
+@import url(owl.carousel.min.css);
+@import url(owl.theme.default.min.css);
+.about_me h2, .services h2, .my_skills h2, .portfolio h2, .testimonials h2 {
   color: #4d4d4d; }
   @media screen and (min-width: 992px) {
-    .about_me h2, .services h2, .my_skills h2, .portfolio h2 {
+    .about_me h2, .services h2, .my_skills h2, .portfolio h2, .testimonials h2 {
       font-size: 46px; } }
   @media screen and (max-width: 767px) {
-    .about_me h2, .services h2, .my_skills h2, .portfolio h2 {
+    .about_me h2, .services h2, .my_skills h2, .portfolio h2, .testimonials h2 {
       font-size: 21px; } }
-  .about_me h2:before, .services h2:before, .my_skills h2:before, .portfolio h2:before {
+  .about_me h2:before, .services h2:before, .my_skills h2:before, .portfolio h2:before, .testimonials h2:before {
     content: '';
     display: block;
     width: 60px;
@@ -190,5 +192,54 @@ header {
           height: 0; } }
   .portfolio .btn:hover {
     background-color: #dedede; }
+
+.testimonials {
+  padding: 10% 0; }
+  .testimonials .owl-carousel .owl-item img {
+    width: 25%;
+    margin: 5% 0 5% 5%;
+    display: inline-block;
+    float: left; }
+  .testimonials .owl-carousel {
+    border: solid 1px black; }
+    .testimonials .owl-carousel h4 {
+      font-size: 30px;
+      color: #212121;
+      text-transform: uppercase;
+      width: 65%;
+      padding-top: 5%;
+      float: right; }
+      @media screen and (max-width: 767px) {
+        .testimonials .owl-carousel h4 {
+          font-size: 15px; } }
+      .testimonials .owl-carousel h4 small {
+        display: block;
+        font-size: 22px; }
+        @media screen and (max-width: 767px) {
+          .testimonials .owl-carousel h4 small {
+            font-size: 8px; } }
+    .testimonials .owl-carousel p {
+      font-size: 16px;
+      color: #212121;
+      width: 65%;
+      float: right;
+      display: block;
+      padding-right: 10%; }
+      @media screen and (max-width: 767px) {
+        .testimonials .owl-carousel p {
+          font-size: 10px; } }
+    .testimonials .owl-carousel button {
+      outline: none; }
+  .testimonials .owl-dots {
+    text-align: center; }
+  .testimonials .owl-carousel button.owl-dot span {
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    border: solid 1px black;
+    display: inline-block;
+    margin: 0 5px; }
+  .testimonials .owl-carousel button.owl-dot.active span {
+    background-color: black; }
 
 /*# sourceMappingURL=style.css.map */
