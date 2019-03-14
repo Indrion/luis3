@@ -242,4 +242,8 @@ header {
   .testimonials .owl-carousel button.owl-dot.active span {
     background-color: black; }
 
+.fun_fact {
+  padding: 10% 0;
+  background-color: #f6f6f6; }
+
 /*# sourceMappingURL=style.css.map */
